@@ -9,7 +9,8 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
-      background: linear-gradient(135deg, #1a2740 60%, #2e8b57 100%);
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       font-family: 'Roboto Slab', serif;
       text-align: center;
@@ -20,56 +21,36 @@
       padding: 40px;
       border-radius: 32px;
       margin: 80px auto;
-      width: 1200px;
+      width: 600px;
       box-shadow: 0 0 40px #1a2740;
-      border: 6px double #e63946;
-      position: relative;
+      border: 8px solid #e63946;
     }
-    h2 {
+    h1 {
       font-family: 'Bangers', cursive;
-      font-size: 2.5em;
+      font-size: 3em;
+      color: #ffd700;
+      text-shadow: 2px 2px #e63946, 4px 4px #1a2740;
       margin-bottom: 20px;
-      letter-spacing: 2px;
-      color: #fff;
-      text-shadow: 2px 2px 0 #e63946, 4px 4px 0 #1a2740;
     }
-    canvas {
+    select, button {
+      font-size: 1.2em;
+      padding: 12px;
+      border-radius: 12px;
+      border: 2px solid #e63946;
+      margin: 12px 0;
       background: #fff;
-      border-radius: 16px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 24px #2e8b57;
-      border: 4px solid #e63946;
+      color: #1a2740;
+      font-family: 'Roboto Slab', serif;
     }
     button {
       background: #e63946;
       color: #fff;
-      font-size: 1.1em;
-      padding: 10px 24px;
-      border-radius: 8px;
-      border: 2px solid #fff;
-      font-family: 'Roboto Slab', serif;
       font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 2px 8px #1a2740;
-      transition: background 0.2s, color 0.2s;
     }
     button:hover {
-      background: #fff;
+      background: #ffd700;
       color: #1a2740;
-      border-color: #e63946;
-    }
-    .stitch {
-      position: absolute;
-      left: -18px; top: 30px;
-      width: 16px; height: 120px;
-      background: repeating-linear-gradient(
-        90deg, #e63946 0 2px, transparent 2px 8px
-      );
-      border-radius: 8px;
-    }
-    .stitch-right {
-      left: auto; right: -18px;
-      transform: scaleX(-1);
     }
   </style>
 </head>
