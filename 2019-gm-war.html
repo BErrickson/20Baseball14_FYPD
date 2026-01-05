@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GM Performance by Total WAR of 2019 Draft Picks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
+    <h2><i class="fa-solid fa-baseball"></i> GM Performance by Total WAR of 2019 Draft Picks <i class="fa-solid fa-baseball"></i></h2>
+    <canvas id="gmWarChart" width="800" height="400"></canvas>
+    <button onclick="window.location.href='index.html'"><i class="fa-solid fa-home"></i> Back to Home Plate</button>
+  </div>
+ <script>
+    const gmLabels = [
+      "Jeff Renshaw", "R.K. Lawrence", "Thomas Kirby", "Andrew Moore", "Jim King",
+      "Anthony DiPonio", "Matt Roseman", "Christian Hoppens", "Richard Homak",
+      "Chris Benest", "Jerimiah Bonham", "Erik Galo", "Christopher Sheehan",
+      "Robert Hanpeter", "Brandyn Errickson", "Patrick King"
+    ];
+    const gmWarTotals = [
+      1.2, 15.1, 21.7, 1.1, 8.5, 10.7, 10.3, 17.6, 4.7, 3.3, 0, -0.6, 0, 2.5, 0.1, 7.7
+    ];
+    new Chart(document.getElementById('gmWarChart'), {
+      type: 'bar',
+      data: {
+        labels: gmLabels,
+        datasets: [{
+          label: 'Total WAR',
+          data: gmWarTotals,
+          backgroundColor: 'rgba(46,139,87,0.85)',
+          borderColor: '#e63946',
+          borderWidth: 3,
+          hoverBackgroundColor: 'rgba(255,215,0,0.85)'
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { ticks: { color: '#e63946', font: { family: 'Bangers', size: 16 } }, grid: { color: '#000' } },
+          y: { ticks: { color: '#2e8b57', font: { family: 'Bangers', size: 16 } }, grid: { color: '#000' } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
