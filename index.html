@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20Baseball14_FYPD Demo</title>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+</head>
+<body>
+    <h1>Welcome to 20Baseball14_FYPD</h1>
+    <div id="data-container">Loading data...</div>
+
+    <script>
+        // Your Firebase configuration
+        const firebaseConfig = {
+			apiKey: "AIzaSyAkFl5fhRn3RRHvxhH3OnN4C-EjBd9xUnc",
+			authDomain: "baseball14-fypd.firebaseapp.com",
+			databaseURL: "https://baseball14-fypd-default-rtdb.firebaseio.com",
+			projectId: "baseball14-fypd",
+			storageBucket: "baseball14-fypd.firebasestorage.app",
+			messagingSenderId: "842240210214",
+			appId: "1:842240210214:web:8ecda27e938daab8093de7"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Example: Fetch data from a Firestore collection called "players"
+        const container = document.getElementById('data-container');
+        db.collection("players").get().then((querySnapshot) => {
+            let html = "<ul>";
+            querySnapshot.forEach((doc) => {
+                html += `<li>${doc.id}: ${JSON.stringify(doc.data())}</li>`;
+            });
+            html += "</ul>";
+            container.innerHTML = html;
+        }).catch((error) => {
+            container.innerHTML = "Error loading data: " + error;
+        });
+    </script>
+</body>
+</html>
