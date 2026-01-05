@@ -42,11 +42,25 @@
       text-shadow: 2px 2px #e63946, 4px 4px #1a2740;
       margin-bottom: 20px;
     }
-    select, button, input {
-      width: 100%;
-      max-width: 400px;
-      box-sizing: border-box;
-      margin-bottom: 1em;
+    select, button {
+      font-size: 1.2em;
+      padding: 12px;
+      border-radius: 12px;
+      border: 2px solid #e63946;
+      margin: 12px 0;
+      background: #fff;
+      color: #1a2740;
+      font-family: 'Roboto Slab', serif;
+    }
+    button {
+      background: #e63946;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ffd700;
+      color: #1a2740;
     }
     @media (min-width: 600px) {
       .container, main, section {
@@ -62,7 +76,6 @@
 <body>
   <main class="container">
     <h1>Fantasy Baseball Rookie Draft Dashboard</h1>
-    <h2>Rookie Draft Dashboard</h2>
     <label for="graph-select">Choose a Graph:</label>
     <select id="graph-select">
       <option>GM Performance by Total WAR</option>
