@@ -39,7 +39,7 @@ body {
       margin-bottom: 20px;
       letter-spacing: 2px;
     }
-    select, button {
+    select, button, input {
       font-size: 1.2em;
       padding: 12px;
       border-radius: 12px;
@@ -76,8 +76,5 @@ body {
       .container, main, section {
         max-width: 1200px;
         padding: 2em;
-      }
-      select, button, input {
-        max-width: 300px;
       }
     }
