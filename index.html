@@ -9,80 +9,12 @@
   <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      background: linear-gradient(135deg, #1a2740 60%, #2e8b57 100%);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: #fff;
-      font-family: 'Roboto Slab', serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      width: 100vw;
-      max-width: 100vw;
-    }
-    .container {
-      background: rgba(255,255,255,0.12);
-      padding: 40px;
-      border-radius: 32px;
-      margin: 80px auto;
-      box-shadow: 0 0 40px #1a2740;
-      border: 6px double #e63946;
-      position: relative;
-      width: 100%;
-      max-width: 100vw;
-      box-sizing: border-box;
-    }
-    h1 {
-      font-family: 'Bangers', cursive;
-      font-size: 3em;
-      color: #ffffff;
-      text-shadow: 2px 2px #e63946, 4px 4px #1a2740;
-      margin-bottom: 20px;
-    }
-    h2 {
-      font-family: 'Bangers', cursive;
-      font-size: 2em;
-      color: #ffffff;
-      text-shadow: 2px 2px #e63946, 4px 4px #1a2740;
-      margin-bottom: 20px;
-    }
-    select, button {
-      font-size: 1.2em;
-      padding: 12px;
-      border-radius: 12px;
-      border: 2px solid #e63946;
-      margin: 12px 0;
-      background: #fff;
-      color: #1a2740;
-      font-family: 'Roboto Slab', serif;
-    }
-    button {
-      background: #e63946;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #ffd700;
-      color: #1a2740;
-    }
-    @media (min-width: 600px) {
-      .container, main, section {
-        max-width: 1200px;
-        padding: 2em;
-      }
-      select, button, input {
-        max-width: 300px;
-      }
-    }
-  </style>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
 </head>
 <body>
   <div class="container">
-    <h1><i class="fa-solid fa-baseball"></i> Fantasy Baseball Rookie Draft Dashboard <i class="fa-solid fa-baseball"></i></h1>
+    <h1><i class="fa-solid fa-baseball"></i> Fantasy Baseball Rookie Draft Dashboard  <i class="fa-solid fa-baseball"></i></h1>
     <h2><label for="graph-select">Choose a Year:</label></h2>
     <select id="graph-select">
       <option value="2019_dashboard.html">2019</option>
