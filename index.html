@@ -13,12 +13,10 @@
   <link rel="stylesheet" href="fypd_stylesheet.css">
 </head>
 <body>
-  <div class="container">  
-    <div class="stitch"></div>
-    <div class="stitch stitch-right"></div>
+  <div class="container">
     <h1><i class="fa-solid fa-baseball"></i> Fantasy Baseball Rookie Draft Dashboard  <i class="fa-solid fa-baseball"></i></h1>
-    <h2><label for="graph-select">Choose a Year:</label></h2>
-    <select id="graph-select">
+    <h2><label for="yearSelect">Choose a Year:</label></h2>
+    <select id="yearSelect">
       <option value="2019_dashboard.html">2019</option>
       <option value="2020_dashboard.html">2020</option>
       <option value="2021_dashboard.html">2021</option>
@@ -28,7 +26,15 @@
       <option value="2025_dashboard.html">2025</option>
     </select>
     <br>
-    <button onclick="goToGraph()"><i class="fa-solid fa-baseball-bat-ball"></i> Go</button>
+    <button onclick="goToYear()"><i class="fa-solid fa-baseball-bat-ball"></i> Go</button>
   </div>
+  <script>
+    function goToYear() {
+      var page = document.getElementById('yearSelect').value;
+      if (page) {
+        window.location.href = page;
+      }
+    }
+  </script>
 </body>
 </html>
