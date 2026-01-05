@@ -1,98 +1,67 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Fantasy Baseball Rookie Draft Dashboard</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      background: linear-gradient(135deg, #1a2740 60%, #2e8b57 100%);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: #fff;
-      font-family: 'Roboto Slab', serif;
-      text-align: center;
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      width: 100vw;
+      max-width: 100vw;
     }
-    .container {
-      background: rgba(255,255,255,0.12);
-      padding: 40px;
-      border-radius: 32px;
-      margin: 80px auto;
-      width: 1200px;
-      box-shadow: 0 0 40px #1a2740;
-      border: 6px double #e63946;
-      position: relative;
+    .container, main, section, header, footer {
+      width: 100%;
+      max-width: 100vw;
+      margin: 0 auto;
+      padding: 1em;
+      box-sizing: border-box;
     }
-    h1 {
-      font-family: 'Bangers', cursive;
-      font-size: 3em;
-      color: #ffd700;
-      text-shadow: 2px 2px #e63946, 4px 4px #1a2740;
-      margin-bottom: 20px;
+    h1, h2, h3, h4, h5, h6 {
+      width: 100%;
+      box-sizing: border-box;
+      word-break: break-word;
     }
-    select, button {
-      font-size: 1.2em;
-      padding: 12px;
-      border-radius: 12px;
-      border: 2px solid #e63946;
-      margin: 12px 0;
-      background: #fff;
-      color: #1a2740;
-      font-family: 'Roboto Slab', serif;
+    select, button, input {
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+      margin-bottom: 1em;
     }
-    button {
-      background: #e63946;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #ffd700;
-      color: #1a2740;
-    }
-    @media (max-width: 600px) {
-        body {
-            margin: 1em;
-        }
-        h1 {
-            font-size: 1.5em;
-        }
-        label, select {
-            font-size: 0.9em;
-            max-width: 100%;
-        }
+    @media (min-width: 600px) {
+      .container, main, section {
+        max-width: 800px;
+        padding: 2em;
+      }
+      select, button, input {
+        max-width: 300px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1><i class="fa-solid fa-baseball"></i> Rookie Draft Dashboard <i class="fa-solid fa-baseball"></i></h1>
-    <label for="graphSelect">Choose a Graph:</label><br>
-    <select id="graphSelect">
-      <option value="gm-war.html">GM Performance by Total WAR</option>
-      <option value="gm-retention.html">GM Retention Rate</option>
-      <option value="gm-trade.html">GM Trade Activity</option>
-      <option value="draft-picks.html">All Draft Picks (Full List)</option>
-      <option value="war-status.html">WAR Distribution by Player Status</option>
-      <option value="draft-success.html">Draft Pick Success Rate by Team</option>
-      <option value="trade-impact.html">Trade Impact Analysis</option>
-      <option value="war-by-pick.html">WAR by Draft Pick Number</option>
-      <option value="games-played.html">Games/Innings Played by Player</option>
-      <option value="war-vs-games.html">WAR vs Games/Innings Played</option>
-      <option value="status-breakdown.html">Drafted Player Status Breakdown</option>
-    </select><br>
-    <button onclick="goToGraph()"><i class="fa-solid fa-baseball-bat-ball"></i> Go</button>
-  </div>
-  <script>
-    function goToGraph() {
-      const page = document.getElementById('graphSelect').value;
-      window.location.href = page;
-    }
-  </script>
+  <main class="container">
+    <h1>Fantasy Baseball Rookie Draft Dashboard</h1>
+    <h2>Rookie Draft Dashboard</h2>
+    <label for="graph-select">Choose a Graph:</label>
+    <select id="graph-select">
+      <option>GM Performance by Total WAR</option>
+      <option>GM Retention Rate</option>
+      <option>GM Trade Activity</option>
+      <option>All Draft Picks (Full List)</option>
+      <option>WAR Distribution by Player Status</option>
+      <option>Draft Pick Success Rate by Team</option>
+      <option>Trade Impact Analysis</option>
+      <option>WAR by Draft Pick Number</option>
+      <option>Games/Innings Played by Player</option>
+      <option>WAR vs Games/Innings Played</option>
+      <option>Drafted Player Status Breakdown</option>
+    </select>
+    <button>Go</button>
+  </main>
 </body>
 </html>
