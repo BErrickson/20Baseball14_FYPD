@@ -3,15 +3,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>20Baseball14_FYPD Demo</title>
+    <title>FYPD Year Dropdown (Firebase)</title>
     <!-- Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js"></script>
+    https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js</script>
+    https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js</script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        label { font-weight: bold; }
+        select { margin-left: 1em; }
+    </style>
 </head>
 <body>
-    <h1>Welcome to 20Baseball14_FYPD</h1>
-    <div id="data-container">Loading data...</div>
+    <h1>Choose a Year</h1>
+    <label for="yearDropdown">Year:</label>
+    <select id="yearDropdown"></select>
+    <div id="status"></div>
 
     <script>
         // Your Firebase configuration
@@ -29,17 +35,24 @@
         const app = firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
 
-        // Example: Fetch data from a Firestore collection called "players"
-        const container = document.getElementById('data-container');
-        db.collection("players").get().then((querySnapshot) => {
-            let html = "<ul>";
+        // Reference to your collection (e.g., "FYPD_All")
+        db.collection("FYPD_All").get().then((querySnapshot) => {
+            const yearsSet = new Set();
             querySnapshot.forEach((doc) => {
-                html += `<li>${doc.id}: ${JSON.stringify(doc.data())}</li>`;
+                const data = doc.data();
+                if (data.Year) yearsSet.add(data.Year);
             });
-            html += "</ul>";
-            container.innerHTML = html;
+            const years = Array.from(yearsSet).sort();
+            const dropdown = document.getElementById('yearDropdown');
+            years.forEach(year => {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                dropdown.appendChild(option);
+            });
+            document.getElementById('status').textContent = "Years loaded from Firebase!";
         }).catch((error) => {
-            container.innerHTML = "Error loading data: " + error;
+            document.getElementById('status').textContent = "Error loading years: " + error;
         });
     </script>
 </body>
