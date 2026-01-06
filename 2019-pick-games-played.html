@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,13 +13,15 @@
 </head>
 <body>
   <div class="container">
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
     <h2><i class="fa-solid fa-baseball"></i> 2019 FYPD Games/Innings Played by Draft Pick <i class="fa-solid fa-baseball"></i></h2>
     <canvas id="gamesPlayedChart" width="800" height="400"></canvas>
     <button onclick="window.location.href='2019_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2019 Dashboard</button>
   </div>
   <script>
 	  // Data from your CSV
-	  const draftData = [
+	  const gamesPlayed = [
       {pick: 1, player: "Andrew Vaughn", games: 674},
       {pick: 2, player: "Adley Rutschmann", games: 505},
       {pick: 3, player: "Bobby Witt Jr", games: 626},
@@ -39,14 +42,14 @@
       {pick: 18, player: "Shea Langeliers", games: 435}
     ];
     
-    const ctx = document.getElementById('gamesChart').getContext('2d');
-    const gamesChart = new Chart(ctx, {
+    const ctx = document.getElementById('gamesPlayedChart').getContext('2d');
+    const gamesPlayedChart = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: draftData.map(d => d.pick),
+        labels: gamesPlayed.map(d => d.pick),
         datasets: [{
           label: 'Games Played',
-          data: draftData.map(d => d.games),
+          data: gamesPlayed.map(d => d.games),
           backgroundColor: 'rgba(54, 162, 235, 0.7)',
           borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1
@@ -63,8 +66,8 @@
               },
               label: function(context) {
                 // Show player name and games played
-                const player = draftData[context.dataIndex].player;
-                const games = draftData[context.dataIndex].games;
+                const player = gamesPlayed[context.dataIndex].player;
+                const games = gamesPlayed[context.dataIndex].games;
                 return player + ": " + games + " games";
               }
             }
