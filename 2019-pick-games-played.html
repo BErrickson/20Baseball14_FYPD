@@ -22,24 +22,24 @@
   <script>
 	  // Data from your CSV
 	  const gamesPlayed = [
-      {pick: 1, player: "Andrew Vaughn", games: 674},
-      {pick: 2, player: "Adley Rutschmann", games: 505},
-      {pick: 3, player: "Bobby Witt Jr", games: 626},
-      {pick: 4, player: "JJ Bleday", games: 404},
-      {pick: 5, player: "Nick Lodolo", games: 409},
-      {pick: 6, player: "Riley Greene", games: 486},
-      {pick: 7, player: "CJ Abrams", games: 523},
-      {pick: 8, player: "Josh Jung", games: 325},
-      {pick: 9, player: "Corbin Carroll", games: 488},
-      {pick: 10, player: "Quinn Priester", games: 257},
-      {pick: 11, player: "Zach Plesac", games: 478.2},
-      {pick: 12, player: "Hunter Bishop", games: 0},
-      {pick: 13, player: "Will Wilson", games: 34},
-      {pick: 14, player: "Keoni Cavaco", games: 0},
-      {pick: 15, player: "Kameron Misner", games: 79},
-      {pick: 16, player: "Brett Baty", games: 299},
-      {pick: 17, player: "Greg Jones", games: 9},
-      {pick: 18, player: "Shea Langeliers", games: 435}
+      {pick: 1, player: "Andrew Vaughn", games: 674, gm: "Jeff Renshaw"},
+      {pick: 2, player: "Adley Rutschmann", games: 505, gm: "R.K. Lawrence"},
+      {pick: 3, player: "Bobby Witt Jr", games: 626, gm: "Thomas Kirby"},
+      {pick: 4, player: "JJ Bleday", games: 404, gm: "Andrew Moore"},
+      {pick: 5, player: "Nick Lodolo", games: 409, gm: "Jim King"},
+      {pick: 6, player: "Riley Greene", games: 486, gm: "Anthony DiPonio"},
+      {pick: 7, player: "CJ Abrams", games: 523, gm: "Matt Roseman"},
+      {pick: 8, player: "Josh Jung", games: 325, gm: "Richard Homak"},
+      {pick: 9, player: "Corbin Carroll", games: 488, gm: "Christian Hoppens"},
+      {pick: 10, player: "Quinn Priester", games: 257, gm: "Christian Hoppens"},
+      {pick: 11, player: "Zach Plesac", games: 478.2, gm: "Chris Benest"},
+      {pick: 12, player: "Hunter Bishop", games: 0, gm: "Jerimiah Bonham"},
+      {pick: 13, player: "Will Wilson", games: 34, gm: "Erik Galo"},
+      {pick: 14, player: "Keoni Cavaco", games: 0, gm: "Christopher Sheehan"},
+      {pick: 15, player: "Kameron Misner", games: 79, gm: "Jeff Renshaw"},
+      {pick: 16, player: "Brett Baty", games: 299, gm: "Robert Hanpeter"},
+      {pick: 17, player: "Greg Jones", games: 9, gm: "Brandyn Errickson"},
+      {pick: 18, player: "Shea Langeliers", games: 435, gm: "Patrick King"}
     ];
     
     const ctx = document.getElementById('gamesPlayedChart').getContext('2d');
@@ -69,7 +69,8 @@
                 // Show player name and games played
                 const player = gamesPlayed[context.dataIndex].player;
                 const games = gamesPlayed[context.dataIndex].games;
-                return player + ": " + games + " games";
+                const gm = gamesPlayed[context.dataIndex].gm;
+                return player + " (GM: " + gm + "): " + games + " games";
               }
             }
           },
