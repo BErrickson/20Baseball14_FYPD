@@ -46,6 +46,57 @@ body {
       box-shadow: 0 0 24px #2e8b57;
       border: 4px solid #e63946;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+      background: #f7f7f7;
+      color: #1a2740;
+      font-size: 1em;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 24px #2e8b57;
+      border: 4px solid #e63946;
+      position: relative;
+      z-index: 3;
+    }
+    th, td {
+      padding: 10px 8px;
+      border-bottom: 2px solid #e63946;
+      text-align: center;
+      font-family: 'Roboto Slab', serif;
+    }
+    th {
+      background: linear-gradient(90deg, #e63946 80%, #ffd700 100%);
+      color: #fff;
+      font-family: 'Bangers', cursive;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      border-top: 4px solid #2e8b57;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+    }
+    th.sort-asc::after {
+      content: " \25B2";
+      color: #ffd700;
+      font-size: 1em;
+    }
+    th.sort-desc::after {
+      content: " \25BC";
+      color: #ffd700;
+      font-size: 1em;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:nth-child(even) td {
+      background: #fffbe6;
+    }
+    tr:hover td {
+      background: #d4f5e9;
+      color: #e63946;
+    }
     select, button, input {
       font-size: 1.2em;
       padding: 12px;
