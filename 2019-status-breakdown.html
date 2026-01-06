@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
   <!-- Shared CSS -->
   <link rel="stylesheet" href="fypd_stylesheet.css">
 </head>
@@ -29,13 +30,23 @@
       data: data,
       options: {
         plugins: {
+          datalabels: {
+            color: '#000',
+            font: {
+              family: 'Bangers, cursive',
+              size: 20
+            },
+            formatter: function(value, context) {
+              return value + " Players"; // Show the number for each slice and add Players text after
+            }
+          },
           legend: {
             labels: { color: '#000', font: { family: 'Bangers', size: 16 } }
           }
         }
-      }
+      },
+      plugins: [ChartDataLabels]
     });
   </script>
 </body>
 </html>
-``
