@@ -17,8 +17,8 @@
     <button onclick="window.location.href='2019_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2019 Dashboard</button>
   </div>
   <script>
-	// Data from your CSV
-	const draftData = [
+	  // Data from your CSV
+	  const draftData = [
       {pick: 1, player: "Andrew Vaughn", games: 674},
       {pick: 2, player: "Adley Rutschmann", games: 505},
       {pick: 3, player: "Bobby Witt Jr", games: 626},
@@ -38,8 +38,8 @@
       {pick: 17, player: "Greg Jones", games: 9},
       {pick: 18, player: "Shea Langeliers", games: 435}
     ];
-    const games = [674,505,626,404,409,486,523,325,488,257,478.2,0,34,0,79,299,9,435];
-	const ctx = document.getElementById('gamesChart').getContext('2d');
+    
+    const ctx = document.getElementById('gamesChart').getContext('2d');
     const gamesChart = new Chart(ctx, {
       type: 'bar',
       data: {
