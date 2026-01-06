@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2019 Draft Picks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+</head>
+<body>
+  <div class="container">  
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
+    <h2><i class="fa-solid fa-baseball"></i> 2019 Draft Picks <i class="fa-solid fa-baseball"></i></h2>
+    <table id="draftTable">
+      <thead>
+        <tr>
+          <th>Pick #</th>
+          <th>Original Team</th>
+          <th>Original Team GM</th>
+          <th>Trade</th>
+          <th>Picking Team</th>
+          <th>Picking Team GM</th>
+          <th>Player</th>
+          <th>MLB Games/Innings</th>
+          <th>WAR</th>
+          <th>2026 Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Texas Rangers</td><td>Jeff Renshaw</td><td>N</td><td>Texas Rangers</td><td>Jeff Renshaw</td><td>Andrew Vaughn</td><td>674</td><td>0.9</td><td>Different Team</td></tr>
+        <tr><td>2</td><td>Baltimore Orioles</td><td>R.K. Lawrence</td><td>N</td><td>Baltimore Orioles</td><td>R.K. Lawrence</td><td>Adley Rutschmann</td><td>505</td><td>15.1</td><td>Same Team</td></tr>
+        <tr><td>3</td><td>Cincinnati Reds</td><td>Thomas Kirby</td><td>N</td><td>Cincinnati Reds</td><td>Thomas Kirby</td><td>Bobby Witt Jr</td><td>626</td><td>21.7</td><td>Different Team</td></tr>
+        <tr><td>4</td><td>Oakland Athletics</td><td>Andrew Moore</td><td>N</td><td>Oakland Athletics</td><td>Andrew Moore</td><td>JJ Bleday</td><td>404</td><td>1.1</td><td>Different Team</td></tr>
+        <tr><td>5</td><td>Detroit Tigers</td><td>Jim King</td><td>N</td><td>Detroit Tigers</td><td>Jim King</td><td>Nick Lodolo</td><td>409</td><td>8.5</td><td>Same Team</td></tr>
+        <tr><td>6</td><td>Chicago Cubs</td><td>Anthony DiPonio</td><td>N</td><td>Chicago Cubs</td><td>Anthony DiPonio</td><td>Riley Greene</td><td>486</td><td>10.7</td><td>Same Team</td></tr>
+        <tr><td>7</td><td>Toronto Blue Jays</td><td>Christian Hoppens</td><td>Y</td><td>Montreal Expos</td><td>Matt Roseman</td><td>CJ Abrams</td><td>523</td><td>10.3</td><td>Different Team</td></tr>
+        <tr><td>8</td><td>New York Yankees</td><td>Richard Homak</td><td>N</td><td>New York Yankees</td><td>Richard Homak</td><td>Josh Jung</td><td>325</td><td>4.7</td><td>Same Team</td></tr>
+        <tr><td>9</td><td>Pittsburgh Priates</td><td>Justin Partain</td><td>Y</td><td>Toronto Blue Jays</td><td>Christian Hoppens</td><td>Corbin Carroll</td><td>488</td><td>15.7</td><td>Different Team</td></tr>
+        <tr><td>10</td><td>Montreal Expos</td><td>Matt Roseman</td><td>Y</td><td>Toronto Blue Jays</td><td>Christian Hoppens</td><td>Quinn Priester</td><td>257</td><td>1.9</td><td>Different Team</td></tr>
+        <tr><td>11</td><td>Boston Red Sox</td><td>Chris Benest</td><td>N</td><td>Boston Red Sox</td><td>Chris Benest</td><td>Zach Plesac</td><td>478.2</td><td>3.3</td><td>Free Agent</td></tr>
+        <tr><td>12</td><td>Kansas City Royals</td><td>Jerimiah Bonham</td><td>N</td><td>Kansas City Royals</td><td>Jerimiah Bonham</td><td>Hunter Bishop</td><td>0</td><td>0</td><td>Free Agent</td></tr>
+        <tr><td>13</td><td>Miami Marlin</td><td>Erik Galo</td><td>N</td><td>Miami Marlin</td><td>Erik Galo</td><td>Will Wilson</td><td>34</td><td>-0.6</td><td>Free Agent</td></tr>
+        <tr><td>14</td><td>Arizona Diamondbacks</td><td>Christopher Sheehan</td><td>N</td><td>Arizona Diamondbacks</td><td>Christopher Sheehan</td><td>Keoni Cavaco</td><td>0</td><td>0</td><td>Free Agent</td></tr>
+        <tr><td>15</td><td>New York Mets</td><td>Rich Heuthe</td><td>Y</td><td>Texas Rangers</td><td>Jeff Renshaw</td><td>Kameron Misner</td><td>79</td><td>0.3</td><td>Free Agent</td></tr>
+        <tr><td>16</td><td>Atlanta Braves</td><td>Robert Hanpeter</td><td>N</td><td>Atlanta Braves</td><td>Robert Hanpeter</td><td>Brett Baty</td><td>299</td><td>2.5</td><td>Different Team</td></tr>
+        <tr><td>17</td><td>San Francisco Giants</td><td>Brandyn Errickson</td><td>N</td><td>San Francisco Giants</td><td>Brandyn Errickson</td><td>Greg Jones</td><td>9</td><td>0.1</td><td>Free Agent</td></tr>
+        <tr><td>18</td><td>Houston Astros</td><td>Patrick King</td><td>N</td><td>Houston Astros</td><td>Patrick King</td><td>Shea Langeliers</td><td>435</td><td>7.7</td><td>Same Team</td></tr>
+      </tbody>
+    </table>
+	<center>
+    <button onclick="window.location.href='index.html'"><i class="fa-solid fa-home"></i> Back to 2019 Dashboard</button>
+	</center>
+  </div>
+  <script>
+    // Sort table columns
+    document.querySelectorAll('#draftTable th').forEach(function(header, idx) {
+      header.addEventListener('click', function() {
+        sortTable(idx);
+        document.querySelectorAll('#draftTable th').forEach(th => th.classList.remove('sort-asc', 'sort-desc'));
+        header.classList.toggle('sort-asc');
+        if (!header.classList.contains('sort-asc')) header.classList.add('sort-desc');
+      });
+    });
+
+    function sortTable(col) {
+      var table = document.getElementById('draftTable');
+      var tbody = table.tBodies[0];
+      var rows = Array.from(tbody.rows);
+      var asc = !table.rows[0].cells[col].classList.contains('sort-asc');
+      rows.sort(function(a, b) {
+        var x = a.cells[col].innerText.trim();
+        var y = b.cells[col].innerText.trim();
+        // Try to parse as float for numeric columns
+        var xNum = parseFloat(x.replace(/,/g, ''));
+        var yNum = parseFloat(y.replace(/,/g, ''));
+        if (!isNaN(xNum) && !isNaN(yNum)) {
+          return asc ? xNum - yNum : yNum - xNum;
+        }
+        return asc ? x.localeCompare(y) : y.localeCompare(x);
+      });
+      rows.forEach(row => tbody.appendChild(row));
+    }
+  </script>
+</body>
+</html>
