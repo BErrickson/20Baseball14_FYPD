@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number of Picks per GM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
+    <h2><i class="fa-solid fa-baseball"></i> Number of Picks per GM All Time <i class="fa-solid fa-baseball"></i></h2>
+    <canvas id="numberOfPicks" width="800" height="400"></canvas>
+    <button onclick="window.location.href='all_dashboard.html'"><i class="fa-solid fa-home"></i> Back to All Time Dashboard</button>
+  </div>
+<script>
+const gmNames = [
+  "Andrew Moore", "Anthony DiPonio", "Bob Heaning", "Brandyn Errickson", "Chris Benest",
+  "Christian Hoppens", "Christopher Sheehan", "Erik Galo", "Jeff Renshaw", "Jerimiah Bonham",
+  "Jim King", "Justin Partain", "Matt Roseman", "Patrick King", "Peter Thies",
+  "R.K. Lawrence", "Rich Heuthe", "Richard Homak", "Robert Hanpeter", "Ryan Lynch",
+  "Steve Prather", "Thomas Kirby"
+];
+const original = [3,5,2,7,4,7,5,7,7,1,7,7,7,7,2,7,7,7,7,6,4,7];
+const tradedFor = [0,1,0,0,0,8,0,0,3,0,0,1,1,1,1,0,0,1,7,5,0,0];
+const tradedAway = [0,2,0,0,0,4,0,3,0,0,0,4,1,1,1,1,4,0,4,2,1,1];
+
+// For waterfall, tradedAway is negative
+const data = {
+  labels: gmNames,
+  datasets: [
+    {
+      label: 'Original',
+      data: original,
+      backgroundColor: 'rgba(46,139,87,0.85)'
+    },
+    {
+      label: 'Traded For',
+      data: tradedFor,
+      backgroundColor: 'rgba(255,215,0, 0.85)'
+    },
+    {
+      label: 'Traded Away',
+      data: tradedAway.map(x => -x), // Negative values
+      backgroundColor: 'rgba(230, 57, 70, 0.85)'
+    }
+  ]
+};
+
+new Chart(document.getElementById('numberOfPicks'), {
+  type: 'bar',
+  data: data,
+  options: {
+    plugins: {
+      legend: { position: 'top', font: { family: 'Bangers', size: 16 }}
+    },
+    scales: {
+      x: {
+        stacked: true,
+		title: {
+              display: true,
+              color: '#e63946',
+              font: {
+                family: 'Bangers, cursive',
+                size: 16
+              }
+		},
+        ticks: {
+			color: '#e63946',
+			autoSkip: false,
+			maxRotation: 90,
+			minRotation: 45,
+			font: {
+				family: 'Bangers, cursive',
+				size: 16
+			}
+		}
+      },
+      y: {
+        stacked: true,
+        beginAtZero: true,
+        title: {
+			display: true,
+			text: 'Number of Picks',
+            color: '#2e8b57',
+            font: {
+              family: 'Bangers, cursive',
+              size: 16
+            }
+        },
+            ticks: {
+              color: '#2e8b57',
+              font: {
+                family: 'Bangers, cursive',
+                size: 16
+              },
+            }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>

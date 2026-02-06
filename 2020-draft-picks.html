@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2020 Draft Picks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+  <script>
+function toggleTradeDetails(rowId, toggleCell) {
+    var row = document.getElementById(rowId);
+    row.style.display = (row.style.display === 'table-row') ? 'none' : 'table-row';
+    if (toggleCell) {
+        toggleCell.classList.toggle('expanded');
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const rows = document.querySelectorAll("tbody .pick-row");
+    rows.forEach((row, idx) => {
+        row.classList.remove("even-row", "odd-row");
+        if (idx % 2 === 0) {
+            row.classList.add("even-row");
+        } else {
+            row.classList.add("odd-row");
+        }
+    });
+});
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
+    <h2><i class="fa-solid fa-baseball"></i> 2020 Draft Picks <i class="fa-solid fa-baseball"></i></h2>
+    <table id="draftTable">
+      <thead>
+        <tr>
+        <tr>
+          <th>Pick #</th>
+          <th>Trade</th>
+          <th>Picking Team</th>
+          <th>Picking Team GM</th>
+          <th>Player</th>
+          <th>MLB Games/Innings</th>
+          <th>WAR</th>
+          <th>2026 Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 2020 Draft Data Rows -->
+        <tr class="pick-row">
+		<td>1</td>
+		<td></td>
+		<td>New York Yankees</td>
+		<td>Richard Homak</td>
+		<td>Spencer Torkelson</td>
+		<td>516</td>
+		<td>2.2</td>
+		<td>Same Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>2</td>
+		<td></td>
+		<td>Boston Red Sox</td>
+		<td>Chris Benest</td>
+		<td>Austin Martin</td>
+		<td>143</td>
+		<td>-0.3</td>
+		<td>Different Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>3</td>
+		<td></td>
+		<td>Toronto Blue Jays</td>
+		<td>Christian Hoppens</td>
+		<td>Asa Lacy</td>
+		<td>0</td>
+		<td>0</td>
+		<td>Free Agent</td>
+		</tr>
+        <tr class="pick-row">
+		<td>4</td>
+		<td></td>
+		<td>Colorado Rockies</td>
+		<td>Ryan Lynch</td>
+		<td>Emerson Hancock</td>
+		<td>162</td>
+		<td>-0.7</td>
+		<td>Same Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>5</td>
+		<td></td>
+		<td>Texas Rangers</td>
+		<td>Jeff Renshaw</td>
+		<td>Reid Detmers</td>
+		<td>449</td>
+		<td>4.6</td>
+		<td>Free Agent</td>
+		</tr>
+        <tr class="pick-row">
+		<td>6</td>
+		<td></td>
+		<td>Pittsburgh Pirates</td>
+		<td>Justin Partain</td>
+		<td>Zac Veen</td>
+		<td>12</td>
+		<td>-0.3</td>
+		<td>Free Agent</td>
+		</tr>
+        <tr class="pick-row">
+		<td>7</td>
+		<td></td>
+		<td>Arizona Diamondbacks</td>
+		<td>Christopher Sheehan</td>
+		<td>Nick Gonzales</td>
+		<td>225</td>
+		<td>0.2</td>
+		<td>Same Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>8</td>
+		<td></td>
+		<td>Baltimore Orioles</td>
+		<td>R.K. Lawrence</td>
+		<td>Garrett Mitchell</td>
+		<td>141</td>
+		<td>3.6</td>
+		<td>Different Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>9</td>
+		<td></td>
+		<td>Chicago Cubs</td>
+		<td>Anthony DiPonio</td>
+		<td>Heston Kjerstad</td>
+		<td>106</td>
+		<td>-1.1</td>
+		<td>Different Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>10</td>
+		<td></td>
+		<td>Cincinnati Reds</td>
+		<td>Thomas Kirby</td>
+		<td>Max Meyer</td>
+		<td>127</td>
+		<td>0</td>
+		<td>Different Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>11</td>
+		<td></td>
+		<td>San Francisco Giants</td>
+		<td>Brandyn Errickson</td>
+		<td>Austin Hendrick</td>
+		<td>0</td>
+		<td>0</td>
+		<td>Free Agent</td>
+		</tr>
+        <tr class="pick-row">
+		<td>12</td>
+		<td></td>
+		<td>Detroit Tigers</td>
+		<td>Jim King</td>
+		<td>Garrett Crochet</td>
+		<td>424</td>
+		<td>12.2</td>
+		<td>Same Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>13</td>
+		<td></td>
+		<td>New York Mets</td>
+		<td>Rich Heuthe</td>
+		<td>Nick Bitsko</td>
+		<td>0</td>
+		<td>0</td>
+		<td>Free Agent</td>
+		</tr>
+        <tr class="pick-row">
+		<td>14</td>
+		<td></td>
+		<td>Oakland Athletics</td>
+		<td>Andrew Moore</td>
+		<td>Robert Hassell</td>
+		<td>70</td>
+		<td>-0.1</td>
+		<td>Different Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>15</td>
+		<td></td>
+		<td>Montreal Expos</td>
+		<td>Matt Roseman</td>
+		<td>Cade Cavalli</td>
+		<td>53</td>
+		<td>-0.1</td>
+		<td>Different Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>16</td>
+		<td></td>
+		<td>Miami Marlin</td>
+		<td>Erik Galo</td>
+		<td>Blaze Jordan</td>
+		<td>0</td>
+		<td>0</td>
+		<td>Different Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>17</td>
+		<td></td>
+		<td>Houston Astros</td>
+		<td>Patrick King</td>
+		<td>Cole Wilcox</td>
+		<td>1</td>
+		<td>-0.3</td>
+		<td>Same Team</td>
+		</tr>
+        <tr class="pick-row">
+		<td>18</td>
+		<td></td>
+		<td>Atlanta Braves</td>
+		<td>Robert Hanpeter</td>
+		<td>Mick Abel</td>
+		<td>39</td>
+		<td>-0.2</td>
+		<td>Same Team</td>
+		</tr>
+      </tbody>
+    </table>
+    <br>
+    <center>
+      <button onclick="window.location.href='2020_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2020 Dashboard</button>
+    </center>
+  </div>
+  <script>
+    // Sort table columns
+    document.querySelectorAll('#draftTable th').forEach(function(header, idx) {
+      header.addEventListener('click', function() {
+        sortTable(idx);
+        document.querySelectorAll('#draftTable th').forEach(th => th.classList.remove('sort-asc', 'sort-desc'));
+        header.classList.toggle('sort-asc');
+        if (!header.classList.contains('sort-asc')) header.classList.add('sort-desc');
+      });
+    });
+    function sortTable(col) {
+      var table = document.getElementById('draftTable');
+      var tbody = table.tBodies[0];
+      var rows = Array.from(tbody.rows);
+      var asc = !table.rows[0].cells[col].classList.contains('sort-asc');
+      rows.sort(function(a, b) {
+        var x = a.cells[col].innerText.trim();
+        var y = b.cells[col].innerText.trim();
+        var xNum = parseFloat(x.replace(/,/g, ''));
+        var yNum = parseFloat(y.replace(/,/g, ''));
+        if (!isNaN(xNum) && !isNaN(yNum)) {
+          return asc ? xNum - yNum : yNum - xNum;
+        }
+        return asc ? x.localeCompare(y) : y.localeCompare(x);
+      });
+      rows.forEach(row => tbody.appendChild(row));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GM Performance by Total WAR of 2023 Draft Picks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
+    <h2><i class="fa-solid fa-baseball"></i> GM Performance by Total WAR of 2023 Draft Picks <i class="fa-solid fa-baseball"></i></h2>
+    <canvas id="gmWarChart" width="800" height="400"></canvas>
+    <button onclick="window.location.href='2023_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2023 Dashboard</button>
+  </div>
+ <script>
+ 
+	const gmLabels = [
+	  "Richard Homak", "Steve Prather", "Ryan Lynch", "Christopher Sheehan", "Robert Hanpeter",
+	  "Jim King", "Thomas Kirby", "Jeff Renshaw", "R.K. Lawrence", "Christian Hoppens",
+	  "Patrick King", "Matt Roseman", "Brandyn Errickson", "Justin Partain", "N/A"
+	];
+
+	const gmWarTotals = [
+	  3.7,    // Richard Homak: Dylan Crews (0.9) + Jacob Wilson (2.8)
+	  13.5,   // Steve Prather: Paul Skenes (13.5)
+	  9.5,    // Ryan Lynch: Wyatt Langford (9.5)
+	  1.9,    // Christopher Sheehan: Rhett Lowder (1.9)
+	  3.1,    // Robert Hanpeter: Matt Shaw (3.1)
+	  0,      // Jim King: Walker Jenkins (0)
+	  0,      // Thomas Kirby: Felnin Celesten (0)
+	  0,      // Jeff Renshaw: Sebastian Walcott (0)
+	  0,      // R.K. Lawrence: Chase Davis (0)
+	  0.8,    // Christian Hoppens: Hurston Waldrep (0.8)
+	  0,      // Patrick King: No WAR for traded picks
+	  0,      // Matt Roseman: Brayden Taylor (0)
+	  0,      // Brandyn Errickson: Brock Wilken (0)
+	  0,      // Justin Partain: Nobel Meyer (0)
+	  0       // N/A: NO PICK
+	];
+    new Chart(document.getElementById('gmWarChart'), {
+      type: 'bar',
+      data: {
+        labels: gmLabels,
+        datasets: [{
+          label: 'Total WAR',
+          data: gmWarTotals,
+          backgroundColor: 'rgba(46,139,87,0.85)',
+          borderColor: '#e63946',
+          borderWidth: 3,
+          hoverBackgroundColor: 'rgba(255,215,0,0.85)'
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { ticks: { color: '#e63946', font: { family: 'Bangers', size: 16 } }},
+          y: { ticks: { color: '#2e8b57', font: { family: 'Bangers', size: 16 } }}
+        }
+      }
+    });
+  </script>
+</body>
+</html>

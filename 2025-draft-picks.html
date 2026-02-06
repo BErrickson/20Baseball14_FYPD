@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2025 Draft Picks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+<script>
+function toggleTradeDetails(rowId, toggleCell) {
+    var row = document.getElementById(rowId);
+    row.style.display = (row.style.display === 'table-row') ? 'none' : 'table-row';
+    if (toggleCell) {
+        toggleCell.classList.toggle('expanded');
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const rows = document.querySelectorAll("tbody .pick-row");
+    rows.forEach((row, idx) => {
+        row.classList.remove("even-row", "odd-row");
+        if (idx % 2 === 0) {
+            row.classList.add("even-row");
+        } else {
+            row.classList.add("odd-row");
+        }
+    });
+});
+</script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>2025 Draft Picks</h2>
+    <table>
+      <thead>
+	  <tr>
+          <th>Pick #</th>
+          <th>Trade</th>
+          <th>Picking Team</th>
+          <th>Picking Team GM</th>
+          <th>Player</th>
+          <th>MLB Games/Innings</th>
+          <th>WAR</th>
+          <th>2026 Status</th>
+        </tr>
+      </thead>
+        <!-- 2025 Draft Picks -->
+	<tr class="pick-row">
+	  <td>1</td>
+	  <td></td>
+	  <td>Chicago Cubs</td>
+	  <td>Bob Heaning</td>
+	  <td>Kade Anderson</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>2</td>
+	  <td></td>
+	  <td>Montreal Expos</td>
+	  <td>Matt Roseman</td>
+	  <td>Ethan Holliday</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<!-- Pick 3: Trade -->
+	<tr class="pick-row">
+	  <td>3</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade2025_3', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>San Diego Padres</td>
+	  <td>Christian Hoppens</td>
+	  <td>Liam Doyle</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr id="trade2025_3" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Peter Thies<br>
+		<strong>Acquired:</strong> Manny Machado and FYPD Pick 14<br>
+		<strong>Picking Team GM:</strong> Christian Hoppens<br>
+		<strong>Acquired:</strong> Christian Moore, Marcelo Mayer and FYPD Pick 3
+	  </td>
+	</tr>
+	<!-- Pick 4: Trade -->
+	<tr class="pick-row">
+	  <td>4</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade2025_4', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>Atlanta Braves</td>
+	  <td>Robert Hanpeter</td>
+	  <td>Aiva Arquette</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr id="trade2025_4" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Steve Prather<br>
+		<strong>Acquired:</strong> Chris Sale<br>
+		<strong>Picking Team GM:</strong> Robert Hanpeter<br>
+		<strong>Acquired:</strong> Trey Yesavage, Moises Ballesteros and FYPD Pick 4
+	  </td>
+	</tr>
+	<!-- Pick 5: Trade -->
+	<tr class="pick-row">
+	  <td>5</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade2025_5', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>Atlanta Braves</td>
+	  <td>Robert Hanpeter</td>
+	  <td>Seth Hernandez</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr id="trade2025_5" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Anthony DiPonio<br>
+		<strong>Acquired:</strong> Trey Yesavage and Matthew Liberatore<br>
+		<strong>Picking Team GM:</strong> Robert Hanpeter<br>
+		<strong>Acquired:</strong> George Klassen, Colt Keith and FYPD Pick 5
+	  </td>
+	</tr>
+	<tr class="pick-row">
+	  <td>6</td>
+	  <td></td>
+	  <td>Tampa Bay Devil Rays</td>
+	  <td>Ryan Lynch</td>
+	  <td>Jamie Arnold</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>7</td>
+	  <td></td>
+	  <td>Baltimore Orioles</td>
+	  <td>R.K. Lawrence</td>
+	  <td>Ethan Conrad</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>8</td>
+	  <td></td>
+	  <td>Texas Rangers</td>
+	  <td>Jeff Renshaw</td>
+	  <td>JoJo Parker</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<!-- Pick 9: Trade -->
+	<tr class="pick-row">
+	  <td>9</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade2025_9', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>San Diego Padres</td>
+	  <td>Christian Hoppens</td>
+	  <td>Kyson Witherspoon</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Different Team</td>
+	</tr>
+	<tr id="trade2025_9" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Rich Heuthe<br>
+		<strong>Acquired:</strong> Alex Clemmey and Carlos Correa<br>
+		<strong>Picking Team GM:</strong> Christian Hoppens<br>
+		<strong>Acquired:</strong> Brayan Rocchio and FYPD Pick 9
+	  </td>
+	</tr>
+	<tr class="pick-row">
+	  <td>10</td>
+	  <td></td>
+	  <td>San Francisco Giants</td>
+	  <td>Brandyn Errickson</td>
+	  <td>Eli Willits</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>11</td>
+	  <td></td>
+	  <td>Detroit Tigers</td>
+	  <td>Jim King</td>
+	  <td>Gage Wood</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>12</td>
+	  <td></td>
+	  <td>Boston Red Sox</td>
+	  <td>Thomas Kirby</td>
+	  <td>Billy Carlson</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>13</td>
+	  <td></td>
+	  <td>New York Yankees</td>
+	  <td>Richard Homak</td>
+	  <td>Ike Irish</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<!-- Pick 14: Trade -->
+	<tr class="pick-row">
+	  <td>14</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade2025_14', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>Chicago White Sox</td>
+	  <td>Peter Thies</td>
+	  <td>Devin Taylor</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr id="trade2025_14" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Christian Hoppens<br>
+		<strong>Acquired:</strong> Christian Moore, Marcelo Mayer and FYPD Pick 3<br>
+		<strong>Picking Team GM:</strong> Peter Thies<br>
+		<strong>Acquired:</strong> Manny Machado and FYPD Pick 14
+	  </td>
+	</tr>
+	<!-- Pick 15: Trade -->
+	<tr class="pick-row">
+	  <td>15</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade2025_15', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>Texas Rangers</td>
+	  <td>Jeff Renshaw</td>
+	  <td>Gavin Fien</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr id="trade2025_15" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Erik Galo<br>
+		<strong>Acquired:</strong> Jackson Merrill and Robby Snelling<br>
+		<strong>Picking Team GM:</strong> Jeff Renshaw<br>
+		<strong>Acquired:</strong> Eduardo Quintero, Jonah Tong and FYPD Pick 15
+	  </td>
+	</tr>
+	<tr class="pick-row">
+	  <td>16</td>
+	  <td></td>
+	  <td>Houston Astros</td>
+	  <td>Patrick King</td>
+	  <td>Steele Hall</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<!-- Pick 17: Trade -->
+	<tr class="pick-row">
+	  <td>17</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade2025_17', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>San Diego Padres</td>
+	  <td>Christian Hoppens</td>
+	  <td>Kayson Cunningham</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr id="trade2025_17" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Justin Partain<br>
+		<strong>Acquired:</strong> Miguel Vargas and Gleyber Torres<br>
+		<strong>Original Team GM:</strong> Christian Hoppens<br>
+		<strong>Acquired:</strong> Trevor Larnach, Carson Williams, Chandler Simpson and FYPD Pick 17
+	  </td>
+	</tr>
+	<!-- Pick 18: Trade -->
+	<tr class="pick-row">
+	  <td>18</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade2025_18', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>Tampa Bay Devil Rays</td>
+	  <td>Ryan Lynch</td>
+	  <td>Xavier Neyens</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr id="trade2025_18" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Robert Hanpeter<br>
+		<strong>Acquired:</strong> Shane Bieber<br>
+		<strong>Picking Team GM:</strong> Ryan Lynch<br>
+		<strong>Acquired:</strong> Jaison Chourio and FYPD Pick 18
+	  </td>
+	</tr>
+    </table>
+    <br>
+    <center>
+      <button onclick="window.location.href='2025_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2025 Dashboard</button>
+    </center>
+  </div>
+</body>
+</html>

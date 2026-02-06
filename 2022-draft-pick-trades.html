@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2022 FYPD Pick Trades</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const rows = document.querySelectorAll("tbody .pick-row");
+    rows.forEach((row, idx) => {
+        row.classList.remove("even-row", "odd-row");
+        if (idx % 2 === 0) {
+            row.classList.add("even-row");
+        } else {
+            row.classList.add("odd-row");
+        }
+    });
+});
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
+    <h2><i class="fa-solid fa-baseball"></i> 2022 FYPD Pick Trades <i class="fa-solid fa-baseball"></i></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Trade Date</th>
+          <th>Pick #</th>
+          <th>Original Team GM</th>
+          <th>Acquired</th>
+          <th>Intermediary Team GM</th>
+          <th>Acquired</th>
+          <th>Second Trade Date</th>
+          <th>Intermediary Team GM</th>
+          <th>Acquired</th>
+          <th>Picking Team GM</th>
+          <th>Acquired</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Only picks with Trade = Y -->
+        <tr class="pick-row">
+          <td>August 7, 2021</td>
+          <td>13</td>
+          <td>R.K. Lawrence</td>
+          <td>Paul Goldschmidt</td>
+          <td></td>
+          <td></td>
+          <td></td>
+		  <td></td>
+          <td></td>
+          <td>Ryan Lynch</td>
+          <td>Gabriel Arias, Cristian Hernandez and FYPD Pick 13</td>
+        </tr>
+        <tr class="pick-row">
+          <td>May 30, 2022</td>
+          <td>14</td>
+          <td>Justin Partain</td>
+          <td>Andrew Vaughn and Wander Franco</td>
+          <td></td>
+          <td></td>
+          <td></td>
+		  <td></td>
+          <td></td>
+          <td>Jeff Renshaw</td>
+          <td>George Kirby, Marcus Semien, Jordan Walker, Zac Veen and FYPD Pick 14</td>
+        </tr>
+        <tr class="pick-row">
+          <td>August 7, 2021</td>
+          <td>16</td>
+          <td>Christian Hoppens</td>
+          <td>Zack Greinke</td>
+          <td>Ryan Lynch</td>
+          <td>Roansy Contreras and FYPD Pick 16</td>
+          <td>March 9, 2022</td>
+          <td>Ryan Lynch</td>
+		  <td>Heliot Ramos, Willy Adames and Edward Cabrera</td>
+          <td>Justin Partain</td>
+          <td>Joshua Lowe, Marcus Semien and FYPD Pick 16</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <center>
+      <button onclick="window.location.href='2022_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2022 Dashboard</button>
+    </center>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GM Performance by Total WAR of 2021 Draft Picks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
+    <h2><i class="fa-solid fa-baseball"></i> GM Performance by Total WAR of 2021 Draft Picks <i class="fa-solid fa-baseball"></i></h2>
+    <canvas id="gmWarChart" width="800" height="400"></canvas>
+    <button onclick="window.location.href='2021_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2021 Dashboard</button>
+  </div>
+  <script>
+    // Aggregate WAR by GM from CSV
+	const gmWarData = [
+		{ gm: "Andrew Moore", war: 0 },
+		{ gm: "Christopher Sheehan", war: 0.2 },
+		{ gm: "Richard Homak", war: -1.2 },
+		{ gm: "Rich Heuthe", war: -1 },
+		{ gm: "Jim King", war: 0.5 },
+		{ gm: "Patrick King", war: -0.5 },
+		{ gm: "Ryan Lynch", war: -0.1 },
+		{ gm: "Erik Galo", war: 0 },
+		{ gm: "Justin Partain", war: -0.6 },
+		{ gm: "Chris Benest", war: 0 },
+		{ gm: "Jeff Renshaw", war: 6.3 },
+		{ gm: "Anthony DiPonio", war: -1.4 },
+		{ gm: "R.K. Lawrence", war: 0 },
+		{ gm: "Matt Roseman", war: 0 },
+		{ gm: "Christian Hoppens", war: 3.4 },
+		{ gm: "Robert Hanpeter", war: 0 },
+		{ gm: "Thomas Kirby", war: -0.1 },
+		{ gm: "Brandyn Errickson", war: 0 }
+];
+    const gmLabels = gmWarData.map(d => d.gm);
+    const gmWarTotals = gmWarData.map(d => d.war);
+    new Chart(document.getElementById('gmWarChart'), {
+      type: 'bar',
+      data: {
+        labels: gmLabels,
+        datasets: [{
+          label: 'Total WAR',
+          data: gmWarTotals,
+          backgroundColor: 'rgba(46,139,87,0.85)',
+          borderColor: '#e63946',
+          borderWidth: 3,
+          hoverBackgroundColor: 'rgba(255,215,0,0.85)'
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { ticks: { color: '#e63946', font: { family: 'Bangers', size: 16 } } },
+          y: { ticks: { color: '#2e8b57', font: { family: 'Bangers', size: 16 } } }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

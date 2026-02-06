@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2021 Fantasy Baseball Rookie Draft Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
+    <h1><i class="fa-solid fa-baseball"></i> 2021 FYPD Dashboard <i class="fa-solid fa-baseball"></i></h1>
+    <h2><label for="graphSelect">Choose a Graph:</label><br></h2>
+    <select id="graphSelect">
+      <option value="2021-draft-picks.html">First Year Player Draft Picks</option>
+      <option value="2021-draft-pick-trades.html">First Year Draft Pick Trades</option>
+      <option value="2021-gm-retention.html">Drafted Player Retention Rate</option>      
+      <option value="2021-status-breakdown.html">Drafted Player Status Breakdown</option>
+      <option value="2021-pick-games-played.html">Games/Innings Played by Draft Pick</option>
+      <option value="2021-gm-war.html">GM Performance by Total WAR</option>
+    </select><br>
+    <button onclick="goToGraph()"><i class="fa-solid fa-baseball-bat-ball"></i> Go</button>
+    <br>
+    <button onclick="window.location.href='index.html'"><i class="fa-solid fa-home"></i> Back to Home Plate</button>
+  </div>
+  <script>
+    function goToGraph() {
+      const page = document.getElementById('graphSelect').value;
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

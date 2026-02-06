@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2022 Draft Picks (Simplified)</title>
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+  <script>
+    function toggleTradeDetails(rowId, toggleCell) {
+      var row = document.getElementById(rowId);
+      row.style.display = (row.style.display === 'table-row') ? 'none' : 'table-row';
+      if (toggleCell) {
+        toggleCell.classList.toggle('expanded');
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>2022 Draft Picks (Expandable Trades)</h2>
+    <table>
+      <caption>2022 FYPD Draft Picks and Trade Details</caption>
+      <thead>
+        <tr>
+          <th>Pick #</th>
+          <th>Trade</th>
+          <th>Picking Team</th>
+          <th>Picking Team GM</th>
+          <th>Player</th>
+          <th>MLB Games/Innings</th>
+          <th>WAR</th>
+          <th>2026 Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>N</td><td>Chicago Cubs</td><td>Anthony DiPonio</td><td>Druw Jones</td><td>0</td><td>0</td><td>Different Team</td>
+        </tr>
+        <tr>
+          <td>2</td><td>N</td><td>Montreal Expos</td><td>Matt Roseman</td><td>Jackson Holliday</td><td>209</td><td>1.1</td><td>Same Team</td>
+        </tr>
+        <tr>
+          <td>3</td><td>N</td><td>Boston Red Sox</td><td>Thomas Kirby</td><td>Elijah Green</td><td>0</td><td>0</td><td>Free Agent</td>
+        </tr>
+        <tr>
+          <td>4</td><td>N</td><td>Miami Marlin</td><td>Erik Galo</td><td>Termarr Johnson</td><td>0</td><td>0</td><td>Different Team</td>
+        </tr>
+        <tr>
+          <td>5</td><td>N</td><td>New York Yankees</td><td>Richard Homak</td><td>Cade Horton</td><td>118</td><td>2</td><td>Same Team</td>
+        </tr>
+        <tr>
+          <td>6</td><td>N</td><td>Houston Astros</td><td>Patrick King</td><td>Dylan Lesko</td><td>0</td><td>0</td><td>Same Team</td>
+        </tr>
+        <tr>
+          <td>7</td><td>N</td><td>Arizona Diamondbacks</td><td>Christopher Sheehan</td><td>Brooks Lee</td><td>189</td><td>-1</td><td>Same Team</td>
+        </tr>
+        <tr>
+          <td>8</td><td>N</td><td>Detroit Tigers</td><td>Jim King</td><td>Cooper Hjerpe</td><td>0</td><td>0</td><td>Same Team</td>
+        </tr>
+        <tr>
+          <td>9</td><td>N</td><td>Texas Rangers</td><td>Jeff Renshaw</td><td>Jacob Berry</td><td>0</td><td>0</td><td>Free Agent</td>
+        </tr>
+        <tr>
+          <td>10</td><td>N</td><td>New York Mets</td><td>Rich Heuthe</td><td>Kevin Parada</td><td>0</td><td>0</td><td>Free Agent</td>
+        </tr>
+        <tr>
+          <td>11</td><td>N</td><td>Colorado Rockies</td><td>Ryan Lynch</td><td>Brandon Barriera</td><td>0</td><td>0</td><td>Same Team</td>
+        </tr>
+        <tr>
+          <td>12</td><td>N</td><td>San Francisco Giants</td><td>Brandyn Errickson</td><td>Ricky Tiedemann</td><td>0</td><td>0</td><td>Same Team</td>
+        </tr>
+        <!-- Trade Y rows with icons and expandable details -->
+        <tr>
+          <td>13</td>
+          <td class="trade-toggle" onclick="toggleTradeDetails('trade13', this)">
+            <span><i class="fa-solid fa-rotate"></i></span>
+          </td>
+          <td>Colorado Rockies</td>
+          <td>Ryan Lynch</td>
+          <td>Gabriel Hughes</td>
+          <td>0</td>
+          <td>0</td>
+          <td>Different Team</td>
+        </tr>
+        <tr id="trade13" class="trade-details" style="display:none;">
+          <td colspan="8">
+            <strong>Trade Details</strong><br>
+            <strong>Original Pick GM:</strong> R.K. Lawrence<br>
+            <strong>Acquired:</strong> Paul Goldschmidt<br>
+            <strong>Picking Team GM:</strong> Ryan Lynch<br>
+            <strong>Acquired:</strong> Gabriel Arias, Cristian Hernandez and FYPD Pick 13
+          </td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td class="trade-toggle" onclick="toggleTradeDetails('trade14', this)">
+            <span><i class="fa-solid fa-rotate"></i></span>
+          </td>
+          <td>Texas Rangers</td>
+          <td>Jeff Renshaw</td>
+          <td>Zach Neto</td>
+          <td>367</td>
+          <td>11.8</td>
+          <td>Different Team</td>
+        </tr>
+        <tr id="trade14" class="trade-details" style="display:none;">
+          <td colspan="8">
+            <strong>Trade Details</strong><br>
+            <strong>Original Pick GM:</strong> Justin Partain<br>
+            <strong>Acquired:</strong> Andrew Vaughn and Wander Franco<br>
+            <strong>Picking Team GM:</strong> Jeff Renshaw<br>
+            <strong>Acquired:</strong> George Kirby, Marcus Semien, Jordan Walker, Zac Veen and FYPD Pick 14
+          </td>
+        </tr>
+        <tr>
+          <td>15</td><td>N</td><td>Kansas City Royals</td><td>Chris Benest</td><td>Roderick Arias</td><td>0</td><td>0</td><td>Different Team</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td class="trade-toggle" onclick="toggleTradeDetails('trade16', this)">
+            <span><i class="fa-solid fa-rotate"></i></span>
+          </td>
+          <td>Pittsburgh Pirates</td>
+          <td>Justin Partain</td>
+          <td>Cam Collier</td>
+          <td>0</td>
+          <td>0</td>
+          <td>Different Team</td>
+        </tr>
+        <tr id="trade16" class="trade-details" style="display:none;">
+          <td colspan="8">
+            <strong>Trade Details</strong><br>
+            <strong>Original Pick GM:</strong> Christian Hoppens<br>
+            <strong>Acquired:</strong> Zack Greinke<br>
+            <strong>Picking Team GM:</strong> Ryan Lynch<br>
+            <strong>Acquired:</strong> Roansy Contreras and FYPD Pick 16<br>
+            <br>
+            <strong>Trade Details</strong><br>
+            <strong>Original Pick GM:</strong> Ryan Lynch<br>
+            <strong>Acquired:</strong> Heliot Ramos, Willy Adames and Edward Cabrera<br>
+            <strong>Picking Team GM:</strong> Justin Partain<br>
+            <strong>Acquired:</strong> Joshua Lowe, Marcus Semien and FYPD Pick 16
+          </td>
+        </tr>
+        <tr>
+          <td>17</td><td>N</td><td>Cincinnati Reds</td><td>Steve Prather</td><td>Jace Jung</td><td>55</td><td>-1</td><td>Different Team</td>
+        </tr>
+        <tr>
+          <td>18</td><td>N</td><td>Atlanta Braves</td><td>Robert Hanpeter</td><td>Gordon Graceffo</td><td>50.2</td><td>-0.8</td><td>Free Agent</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

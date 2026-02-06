@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2021 FYPD Pick Trades</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const rows = document.querySelectorAll("tbody .pick-row");
+    rows.forEach((row, idx) => {
+        row.classList.remove("even-row", "odd-row");
+        if (idx % 2 === 0) {
+            row.classList.add("even-row");
+        } else {
+            row.classList.add("odd-row");
+        }
+    });
+});
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
+    <h2><i class="fa-solid fa-baseball"></i> 2021 FYPD Pick Trades <i class="fa-solid fa-baseball"></i></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Trade Date</th>
+          <th>Pick #</th>
+          <th>Original Team GM</th>
+          <th>Acquired</th>
+          <th>Picking Team GM</th>
+          <th>Acquired</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Only picks with Trade = Y are shown -->
+        <tr class="pick-row">
+          <td>March 16, 2021</td>
+          <td>4</td>
+          <td>Rich Heuthe</td>
+          <td>Xander Bogaerts</td>
+          <td>Ryan Lynch</td>
+          <td>Randy Arozarena and FYPD Pick 4</td>
+        </tr>
+        <tr class="pick-row">
+          <td>March 31, 2021</td>
+          <td>8</td>
+          <td>Erik Galo</td>
+          <td>Alek Manoah and James Paxton</td>
+          <td>Anthony DiPonio</td>
+          <td>Brendan Rodgers and FYPD Pick 8</td>
+        </tr>
+        <tr class="pick-row">
+          <td>April 16, 2021</td>
+          <td>17</td>
+          <td>Thomas Kirby</td>
+          <td>Chris Paddack</td>
+          <td>Robert Hanpeter</td>
+          <td>Matt Olson, Erick Pena and FYPD Pick 17</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <center>
+      <button onclick="window.location.href='2021_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2021 Dashboard</button>
+    </center>
+  </div>
+</body>
+</html>

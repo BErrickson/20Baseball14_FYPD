@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>2019 GM Retention Rate</title>
+  <title>2025 GM Retention Rate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
@@ -15,32 +15,27 @@
   <div class="container">
     <div class="stitch"></div>
     <div class="stitch stitch-right"></div>
-    <h2><i class="fa-solid fa-baseball"></i> 2019 GM Retention Rate (Players Still on Same Team in 2026) <i class="fa-solid fa-baseball"></i></h2>
+    <h2><i class="fa-solid fa-baseball"></i> 2025 GM Retention Rate (Players Still on Same Team in 2026) <i class="fa-solid fa-baseball"></i></h2>
     <canvas id="gmRetentionChart" width="800" height="400"></canvas>
-    <button onclick="window.location.href='2019_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2019 Dashboard</button>
+    <button onclick="window.location.href='2025_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2025 Dashboard</button>
   </div>
   <script>
-    const gmRetention = [
-        { gm: "Jeff Renshaw", value: 0, player: "" },
-        { gm: "R.K. Lawrence", value: 1, player: "Adley Rutschmann", pick: "2" },
-        { gm: "Thomas Kirby", value: 0, player: "" },
-        { gm: "Andrew Moore", value: 0, player: "" },
-        { gm: "Jim King", value: 1, player: "Nick Lodolo", pick: "5" },
-        { gm: "Anthony DiPonio", value: 1, player: "Riley Greene", pick: "6" },
-        { gm: "Matt Roseman", value: 0, player: "" },
-        { gm: "Christian Hoppens", value: 0, player: "" },
-        { gm: "Richard Homak", value: 1, player: "Josh Jung", pick: "9" },
-        { gm: "Justin Partain", value: 0, player: "" },
-        { gm: "Chris Benest", value: 0, player: "" },
-        { gm: "Jerimiah Bonham", value: 0, player: "" },
-        { gm: "Erik Galo", value: 0, player: "" },
-        { gm: "Christopher Sheehan", value: 0, player: "" },
-        { gm: "Rich Heuthe", value: 0, player: "" },
-        { gm: "Robert Hanpeter", value: 0, player: "" },
-        { gm: "Brandyn Errickson", value: 0, player: "" },
-        { gm: "Patrick King", value: 1, player: "Shea Langeliers", pick: "18" }
-      ];
-      
+// 2025 GM Retention Data (Combined by GM)
+	const gmRetention = [
+	  { gm: "Bob Heaning", value: 1, player: "Kade Anderson", pick: "1" },
+	  { gm: "Matt Roseman", value: 1, player: "Ethan Holliday", pick: "2" },
+	  { gm: "Christian Hoppens", value: 0.6667, player: "Liam Doyle, Kyson Witherspoon, Kayson Cunningham", pick: "3, 9, 17" }, // 2 of 3 picks retained
+	  { gm: "Robert Hanpeter", value: 1, player: "Aiva Arquette, Seth Hernandez", pick: "4, 5" },
+	  { gm: "Ryan Lynch", value: 1, player: "Jamie Arnold, Xavier Neyens", pick: "6, 18"  },
+	  { gm: "R.K. Lawrence", value: 1, player: "Ethan Conrad", pick: "7"  },
+	  { gm: "Jeff Renshaw", value: 1, player: "JoJo Parker, Gavin Fien", pick: "8, 15"  },
+	  { gm: "Brandyn Errickson", value: 1, player: "Eli Willits", pick: "10"  },
+	  { gm: "Jim King", value: 1, player: "Gage Wood", pick: "11"  },
+	  { gm: "Thomas Kirby", value: 1, player: "Billy Carlson", pick: "12" },
+	  { gm: "Richard Homak", value: 1, player: "Ike Irish", pick: "13" },
+	  { gm: "Peter Thies", value: 1, player: "Devin Taylor", pick: "14" },
+	  { gm: "Patrick King", value: 1, player: "Steele Hall", pick: "16" }
+	];
       const data = {
         labels: gmRetention.map(d => d.gm),
         datasets: [{

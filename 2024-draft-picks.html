@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2024 Draft Picks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+<script>
+function toggleTradeDetails(rowId, toggleCell) {
+    var row = document.getElementById(rowId);
+    row.style.display = (row.style.display === 'table-row') ? 'none' : 'table-row';
+    if (toggleCell) {
+        toggleCell.classList.toggle('expanded');
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const rows = document.querySelectorAll("tbody .pick-row");
+    rows.forEach((row, idx) => {
+        row.classList.remove("even-row", "odd-row");
+        if (idx % 2 === 0) {
+            row.classList.add("even-row");
+        } else {
+            row.classList.add("odd-row");
+        }
+    });
+});
+</script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>2024 Draft Picks</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Pick #</th>
+          <th>Trade</th>
+          <th>Picking Team</th>
+          <th>Picking Team GM</th>
+          <th>Player</th>
+          <th>MLB Games/Innings</th>
+          <th>WAR</th>
+          <th>2026 Status</th>
+        </tr>
+      </thead>
+	<tr class="pick-row">
+	  <td>1</td>
+	  <td></td>
+	  <td>Miami Marlin</td>
+	  <td>Erik Galo</td>
+	  <td>Charlie Condon</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>2</td>
+	  <td></td>
+	  <td>Boston Red Sox</td>
+	  <td>Thomas Kirby</td>
+	  <td>Jac Caglianone</td>
+	  <td>62</td>
+	  <td>-1.3</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>3</td>
+	  <td></td>
+	  <td>Tampa Bay Devil Rays</td>
+	  <td>Ryan Lynch</td>
+	  <td>Travis Bazzana</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>4</td>
+	  <td></td>
+	  <td>Detroit Tigers</td>
+	  <td>Jim King</td>
+	  <td>JJ Wetherholt</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>5</td>
+	  <td></td>
+	  <td>Houston Astros</td>
+	  <td>Patrick King</td>
+	  <td>Hagen Smith</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>6</td>
+	  <td></td>
+	  <td>New York Mets</td>
+	  <td>Rich Heuthe</td>
+	  <td>Nick Kurtz</td>
+	  <td>117</td>
+	  <td>5.4</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>7</td>
+	  <td></td>
+	  <td>New York Yankees</td>
+	  <td>Richard Homak</td>
+	  <td>Chase Burns</td>
+	  <td>43</td>
+	  <td>0.2</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>8</td>
+	  <td></td>
+	  <td>Baltimore Orioles</td>
+	  <td>R.K. Lawrence</td>
+	  <td>Konnor Griffin</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Different Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>9</td>
+	  <td></td>
+	  <td>Chicago White Sox</td>
+	  <td>Peter Thies</td>
+	  <td>Christian Moore</td>
+	  <td>53</td>
+	  <td>0.1</td>
+	  <td>Different Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>10</td>
+	  <td></td>
+	  <td>Toronto Blue Jays</td>
+	  <td>Anthony DiPonio</td>
+	  <td>Bryce Rainer</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Different Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>11</td>
+	  <td></td>
+	  <td>Chicago Cubs</td>
+	  <td>Bob Heaning</td>
+	  <td>Braden Montgomery</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>12</td>
+	  <td></td>
+	  <td>Texas Rangers</td>
+	  <td>Jeff Renshaw</td>
+	  <td>Vance Honeycutt</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Free Agent</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>13</td>
+	  <td></td>
+	  <td>Cincinnati Reds</td>
+	  <td>Steve Prather</td>
+	  <td>Trey Yesavage</td>
+	  <td>14</td>
+	  <td>0.3</td>
+	  <td>Different Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>14</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade14', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>Atlanta Braves</td>
+	  <td>Robert Hanpeter</td>
+	  <td>Cam Smith</td>
+	  <td>134</td>
+	  <td>1.9</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr id="trade14" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Christian Hoppens<br>
+		<strong>Acquired:</strong> Spencer Steer and FYPD Pick 16<br>
+		<strong>Picking Team GM:</strong> Robert Hanpeter<br>
+		<strong>Acquired:</strong> Christian Scott and FYPD Pick 14
+	  </td>
+	</tr>
+	<tr class="pick-row">
+	  <td>15</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade15', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>San Diego Padres</td>
+	  <td>Christian Hoppens</td>
+	  <td>James Tibbs III</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Different Team</td>
+	</tr>
+	<tr id="trade15" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Justin Partain<br>
+		<strong>Acquired:</strong> Craig Kimbrel<br>
+		<strong>Picking Team GM:</strong> Christian Hoppens<br>
+		<strong>Acquired:</strong> Jefferson Rojas and FYPD Pick 15
+	  </td>
+	</tr>
+	<tr class="pick-row">
+	  <td>16</td>
+	  <td class="trade-toggle" onclick="toggleTradeDetails('trade16', this)">
+		<span><i class="fa-solid fa-rotate"></i></span>
+	  </td>
+	  <td>San Diego Padres</td>
+	  <td>Christian Hoppens</td>
+	  <td>Theo Gillen</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr id="trade16" class="trade-details" style="display:none;">
+	  <td colspan="8">
+		<strong>Trade Details</strong><br>
+		<strong>Original Team GM:</strong> Robert Hanpeter<br>
+		<strong>Acquired:</strong> Christian Scott and FYPD Pick 14<br>
+		<strong>Picking Team GM:</strong> Christian Hoppens<br>
+		<strong>Acquired:</strong> Spencer Steer and FYPD Pick 16
+	  </td>
+	</tr>
+	<tr class="pick-row">
+	  <td>17</td>
+	  <td></td>
+	  <td>Montreal Expos</td>
+	  <td>Matt Roseman</td>
+	  <td>Ryan Waldschmidt</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Same Team</td>
+	</tr>
+	<tr class="pick-row">
+	  <td>18</td>
+	  <td></td>
+	  <td>San Francisco Giants</td>
+	  <td>Brandyn Errickson</td>
+	  <td>Cam Caminiti</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>Different Team</td>
+	</tr>
+    </table>
+    <br>
+    <center>
+      <button onclick="window.location.href='2024_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2024 Dashboard</button>
+    </center>
+  </div>
+</body>
+</html>

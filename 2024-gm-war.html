@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GM Performance by Total WAR of 2024 Draft Picks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <div class="stitch"></div>
+    <div class="stitch stitch-right"></div>
+    <h2><i class="fa-solid fa-baseball"></i> GM Performance by Total WAR of 2024 Draft Picks <i class="fa-solid fa-baseball"></i></h2>
+    <canvas id="gmWarChart" width="800" height="400"></canvas>
+    <button onclick="window.location.href='2024_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2024 Dashboard</button>
+  </div>
+ <script>
+ 
+	const gmLabels = [
+      "Erik Galo",
+      "Thomas Kirby",
+      "Ryan Lynch",
+      "Jim King",
+      "Patrick King",
+      "Rich Heuthe",
+      "Richard Homak",
+      "R.K. Lawrence",
+      "Peter Thies",
+      "Anthony DiPonio",
+      "Bob Heaning",
+      "Jeff Renshaw",
+      "Steve Prather",
+      "Robert Hanpeter",
+      "Christian Hoppens",
+      "Matt Roseman",
+      "Brandyn Errickson"
+	];
+
+	const gmWarTotals = [
+      0,      // Erik Galo: Charlie Condon (0)
+      -1.3,   // Thomas Kirby: Jac Caglianone (-1.3)
+      0,      // Ryan Lynch: Travis Bazzana (0)
+      0,      // Jim King: JJ Wetherholt (0)
+      0,      // Patrick King: Hagen Smith (0)
+      5.4,    // Rich Heuthe: Nick Kurtz (5.4)
+      0.2,    // Richard Homak: Chase Burns (0.2)
+      0,      // R.K. Lawrence: Konnor Griffin (0)
+      0.1,    // Peter Thies: Christian Moore (0.1)
+      0,      // Anthony DiPonio: Bryce Rainer (0)
+      0,      // Bob Heaning: Braden Montgomery (0)
+      0,      // Jeff Renshaw: Vance Honeycutt (0)
+      0.3,    // Steve Prather: Trey Yesavage (0.3)
+      1.9,    // Robert Hanpeter: Cam Smith (1.9)
+      0,      // Christian Hoppens: James Tibbs III (0) + Theo Gillen (0)
+      0,      // Matt Roseman: Ryan Waldschmidt (0)
+      0       // Brandyn Errickson: Cam Caminiti (0)
+	];
+    new Chart(document.getElementById('gmWarChart'), {
+      type: 'bar',
+      data: {
+        labels: gmLabels,
+        datasets: [{
+          label: 'Total WAR',
+          data: gmWarTotals,
+          backgroundColor: 'rgba(46,139,87,0.85)',
+          borderColor: '#e63946',
+          borderWidth: 3,
+          hoverBackgroundColor: 'rgba(255,215,0,0.85)'
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { ticks: { color: '#e63946', font: { family: 'Bangers', size: 16 } }},
+          y: { ticks: { color: '#2e8b57', font: { family: 'Bangers', size: 16 } }}
+        }
+      }
+    });
+  </script>
+</body>
+</html>

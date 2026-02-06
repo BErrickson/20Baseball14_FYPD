@@ -67,7 +67,7 @@ body {
       font-family: 'Roboto Slab', serif;
     }
     th {
-      background: linear-gradient(90deg, #e63946 80%, #ffd700 100%);
+      background: #e63946;
       color: #fff;
       font-family: 'Bangers', cursive;
       font-size: 1.1em;
@@ -89,9 +89,6 @@ body {
     }
     tr:last-child td {
       border-bottom: none;
-    }
-    tr:nth-child(even) td {
-      background: #fffbe6;
     }
     tr:hover td {
       background: #d4f5e9;
@@ -131,8 +128,33 @@ body {
       transform: scaleX(-1);
     }
     @media (min-width: 600px) {
-      .container, main, section {
+	.container, main, section {
         max-width: 1200px;
         padding: 2em;
-      }
+    }
+	.trade-toggle .fa-rotate {
+		font-size: 1em;
+		vertical-align: middle;
+		color: #2ecc40;
+		transition: transform 0.2s, color 0.2s;
+	}
+	.trade-toggle.expanded .fa-rotate {
+		transform: rotate(180deg);
+		color: #e67e22;
+	}
+	/* Only color main pick rows */
+	.even-row {
+		background-color: #fffbe6;
+	}
+	.odd-row {
+		background-color: #fff;
+	}
+	/* Trade details row styling (optional) */
+	.trade-details {
+		background-color: #e63946;
+		font-size: 1em;
+		vertical-align: middle;
+		color: #fff;
+		transition: transform 0.2s, color 0.2s;
+	}
     }

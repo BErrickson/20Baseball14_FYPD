@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>2019 FYPD Games/Innings Played by Draft Pick</title>
+  <title>2020 FYPD Games/Innings Played by Draft Pick</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
@@ -15,32 +15,32 @@
   <div class="container">
     <div class="stitch"></div>
     <div class="stitch stitch-right"></div>
-    <h2><i class="fa-solid fa-baseball"></i> 2019 FYPD Games/Innings Played by Draft Pick <i class="fa-solid fa-baseball"></i></h2>
+    <h2><i class="fa-solid fa-baseball"></i> 2020 FYPD Games/Innings Played by Draft Pick <i class="fa-solid fa-baseball"></i></h2>
     <canvas id="gamesPlayedChart" width="800" height="400"></canvas>
-    <button onclick="window.location.href='2019_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2019 Dashboard</button>
+    <button onclick="window.location.href='2020_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2020 Dashboard</button>
   </div>
   <script>
 	  // Data from your CSV
 	  const gamesPlayed = [
-      {pick: 1, player: "Andrew Vaughn", games: 674, gm: "Jeff Renshaw"},
-      {pick: 2, player: "Adley Rutschmann", games: 505, gm: "R.K. Lawrence"},
-      {pick: 3, player: "Bobby Witt Jr", games: 626, gm: "Thomas Kirby"},
-      {pick: 4, player: "JJ Bleday", games: 404, gm: "Andrew Moore"},
-      {pick: 5, player: "Nick Lodolo", games: 409, gm: "Jim King"},
-      {pick: 6, player: "Riley Greene", games: 486, gm: "Anthony DiPonio"},
-      {pick: 7, player: "CJ Abrams", games: 523, gm: "Matt Roseman"},
-      {pick: 8, player: "Josh Jung", games: 325, gm: "Richard Homak"},
-      {pick: 9, player: "Corbin Carroll", games: 488, gm: "Christian Hoppens"},
-      {pick: 10, player: "Quinn Priester", games: 257, gm: "Christian Hoppens"},
-      {pick: 11, player: "Zach Plesac", games: 478.2, gm: "Chris Benest"},
-      {pick: 12, player: "Hunter Bishop", games: 0, gm: "Jerimiah Bonham"},
-      {pick: 13, player: "Will Wilson", games: 34, gm: "Erik Galo"},
-      {pick: 14, player: "Keoni Cavaco", games: 0, gm: "Christopher Sheehan"},
-      {pick: 15, player: "Kameron Misner", games: 79, gm: "Jeff Renshaw"},
-      {pick: 16, player: "Brett Baty", games: 299, gm: "Robert Hanpeter"},
-      {pick: 17, player: "Greg Jones", games: 9, gm: "Brandyn Errickson"},
-      {pick: 18, player: "Shea Langeliers", games: 435, gm: "Patrick King"}
-    ];
+      {pick: 1, player: "Spencer Torkelson", games: 516, gm: "Richard Homak"},
+      {pick: 2, player: "Austin Martin", games: 143, gm: "Chris Benest"},
+      {pick: 3, player: "Asa Lacy", games: 0, gm: "Christian Hoppens"},
+      {pick: 4, player: "Emerson Hancock", games: 162, gm: "Ryan Lynch"},
+      {pick: 5, player: "Reid Detmers", games: 449, gm: "Jeff Renshaw"},
+      {pick: 6, player: "Zac Veen", games: 12, gm: "Justin Partain"},
+      {pick: 7, player: "Nick Gonzales", games: 225, gm: "Christopher Sheehan"},
+      {pick: 8, player: "Garrett Mitchell", games: 141, gm: "R.K. Lawrence"},
+      {pick: 9, player: "Heston Kjerstad", games: 106, gm: "Anthony DiPonio"},
+      {pick: 10, player: "Max Meyer", games: 127, gm: "Thomas Kirby"},
+      {pick: 11, player: "Austin Hendrick", games: 0, gm: "Brandyn Errickson"},
+      {pick: 12, player: "Garrett Crochet", games: 424, gm: "Jim King"},
+      {pick: 13, player: "Nick Bitsko", games: 0, gm: "Rich Heuthe"},
+      {pick: 14, player: "Robert Hassell", games: 70, gm: "Andrew Moore"},
+      {pick: 15, player: "Cade Cavalli", games: 53, gm: "Matt Roseman"},
+      {pick: 16, player: "Blaze Jordan", games: 0, gm: "Erik Galo"},
+      {pick: 17, player: "Cole Wilcox", games: 1, gm: "Patrick King"},
+      {pick: 18, player: "Mick Abel", games: 39, gm: "Robert Hanpeter"}
+    ];    
     const ctx = document.getElementById('gamesPlayedChart').getContext('2d');
     const gamesPlayedChart = new Chart(ctx, {
       type: 'bar',

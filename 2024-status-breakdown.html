@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2024 Drafted Player Status Breakdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <link rel="stylesheet" href="fypd_stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <h2><i class="fa-solid fa-baseball"></i> 2024 Drafted Player Status Breakdown <i class="fa-solid fa-baseball"></i></h2>
+    <canvas id="statusBreakdownChart" width="800" height="400"></canvas>
+    <button onclick="window.location.href='2024_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2024 Dashboard</button>
+  </div>
+  <script>
+	// Counts from 2024 CSV: 11 Same Team, 6 Different Team, 1 Free Agent
+	const data = {
+	  labels: ['Same Team', 'Different Team', 'Free Agent'],
+	  datasets: [{
+		data: [11, 6, 1],
+		backgroundColor: ['#2e8b57', '#e63946', '#ffd700', '#ff5700']
+	  }]
+	};
+    new Chart(document.getElementById('statusBreakdownChart'), {
+      type: 'pie',
+      data: data,
+      options: {
+        plugins: {
+          datalabels: {
+            color: '#000',
+            font: {
+              family: 'Bangers, cursive',
+              size: 20
+            },
+            formatter: function(value, context) {
+              return value + " Players";
+            }
+          },
+          legend: {
+            labels: { color: '#000', font: { family: 'Bangers', size: 16 } }
+          }
+        }
+      },
+      plugins: [ChartDataLabels]
+    });
+  </script>
+</body>
+</html>

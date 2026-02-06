@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>2019 FYPD Games/Innings Played by Draft Pick</title>
+  <title>2022 FYPD Games/Innings Played by Draft Pick</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Bangers:400&display=swap" rel="stylesheet">
@@ -15,32 +15,33 @@
   <div class="container">
     <div class="stitch"></div>
     <div class="stitch stitch-right"></div>
-    <h2><i class="fa-solid fa-baseball"></i> 2019 FYPD Games/Innings Played by Draft Pick <i class="fa-solid fa-baseball"></i></h2>
+    <h2><i class="fa-solid fa-baseball"></i> 2022 FYPD Games/Innings Played by Draft Pick <i class="fa-solid fa-baseball"></i></h2>
     <canvas id="gamesPlayedChart" width="800" height="400"></canvas>
-    <button onclick="window.location.href='2019_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2019 Dashboard</button>
+    <button onclick="window.location.href='2022_dashboard.html'"><i class="fa-solid fa-home"></i> Back to 2022 Dashboard</button>
   </div>
   <script>
 	  // Data from your CSV
 	  const gamesPlayed = [
-      {pick: 1, player: "Andrew Vaughn", games: 674, gm: "Jeff Renshaw"},
-      {pick: 2, player: "Adley Rutschmann", games: 505, gm: "R.K. Lawrence"},
-      {pick: 3, player: "Bobby Witt Jr", games: 626, gm: "Thomas Kirby"},
-      {pick: 4, player: "JJ Bleday", games: 404, gm: "Andrew Moore"},
-      {pick: 5, player: "Nick Lodolo", games: 409, gm: "Jim King"},
-      {pick: 6, player: "Riley Greene", games: 486, gm: "Anthony DiPonio"},
-      {pick: 7, player: "CJ Abrams", games: 523, gm: "Matt Roseman"},
-      {pick: 8, player: "Josh Jung", games: 325, gm: "Richard Homak"},
-      {pick: 9, player: "Corbin Carroll", games: 488, gm: "Christian Hoppens"},
-      {pick: 10, player: "Quinn Priester", games: 257, gm: "Christian Hoppens"},
-      {pick: 11, player: "Zach Plesac", games: 478.2, gm: "Chris Benest"},
-      {pick: 12, player: "Hunter Bishop", games: 0, gm: "Jerimiah Bonham"},
-      {pick: 13, player: "Will Wilson", games: 34, gm: "Erik Galo"},
-      {pick: 14, player: "Keoni Cavaco", games: 0, gm: "Christopher Sheehan"},
-      {pick: 15, player: "Kameron Misner", games: 79, gm: "Jeff Renshaw"},
-      {pick: 16, player: "Brett Baty", games: 299, gm: "Robert Hanpeter"},
-      {pick: 17, player: "Greg Jones", games: 9, gm: "Brandyn Errickson"},
-      {pick: 18, player: "Shea Langeliers", games: 435, gm: "Patrick King"}
+    {pick: 1, player: "Druw Jones", games: 0, gm: "Anthony DiPonio"},
+    {pick: 2, player: "Jackson Holliday", games: 209, gm: "Matt Roseman"},
+    {pick: 3, player: "Elijah Green", games: 0, gm: "Thomas Kirby"},
+    {pick: 4, player: "Termarr Johnson", games: 0, gm: "Erik Galo"},
+    {pick: 5, player: "Cade Horton", games: 118, gm: "Richard Homak"},
+    {pick: 6, player: "Dylan Lesko", games: 0, gm: "Patrick King"},
+    {pick: 7, player: "Brooks Lee", games: 189, gm: "Christopher Sheehan"},
+    {pick: 8, player: "Cooper Hjerpe", games: 0, gm: "Jim King"},
+    {pick: 9, player: "Jacob Berry", games: 0, gm: "Jeff Renshaw"},
+    {pick: 10, player: "Kevin Parada", games: 0, gm: "Rich Heuthe"},
+    {pick: 11, player: "Brandon Barriera", games: 0, gm: "Ryan Lynch"},
+    {pick: 12, player: "Ricky Tiedemann", games: 0, gm: "Brandyn Errickson"},
+    {pick: 13, player: "Gabriel Hughes", games: 0, gm: "Ryan Lynch"},
+    {pick: 14, player: "Zach Neto", games: 367, gm: "Jeff Renshaw"},
+    {pick: 15, player: "Roderick Arias", games: 0, gm: "Chris Benest"},
+    {pick: 16, player: "Cam Collier", games: 0, gm: "Justin Partain"},
+    {pick: 17, player: "Jace Jung", games: 55, gm: "Steve Prather"},
+    {pick: 18, player: "Gordon Graceffo", games: 50.2, gm: "Robert Hanpeter"}
     ];
+    
     const ctx = document.getElementById('gamesPlayedChart').getContext('2d');
     const gamesPlayedChart = new Chart(ctx, {
       type: 'bar',
